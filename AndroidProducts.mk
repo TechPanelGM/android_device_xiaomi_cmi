@@ -6,3 +6,9 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_cmi.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_cmi-user \
+    lineage_cmi-userdebug \
+    lineage_cmi-eng
+

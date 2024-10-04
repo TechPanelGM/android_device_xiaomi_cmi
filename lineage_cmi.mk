@@ -14,11 +14,25 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from cmi device
 $(call inherit-product, device/xiaomi/cmi/device.mk)
 
-PRODUCT_NAME := lineage_cmi
-PRODUCT_DEVICE := cmi
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 10 Pro
+# Extra Packages
+$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk) # HolyBear Leica camera
+
+# Include Vendor Keys
+include vendor/evolution-priv/keys/keys.mk
+
+# Extra Tags
+EVO_BUILD_TYPE 	        := COMMUNITY
+TARGET_USES_MIUI_DOLBY  := true
+TARGET_HAS_UDFPS        := true
+WITH_GAPPS              := true
+BUILD_BCR               := true
+
+# Device Details
+PRODUCT_NAME            := evolution_cmi
+PRODUCT_DEVICE          := cmi
+PRODUCT_MANUFACTURER    := Xiaomi
+PRODUCT_BRAND           := Xiaomi
+PRODUCT_MODEL           := Mi 10 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

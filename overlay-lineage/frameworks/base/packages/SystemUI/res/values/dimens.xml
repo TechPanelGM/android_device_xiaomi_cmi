@@ -33,4 +33,7 @@
 
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <dimen name="system_icons_keyguard_padding_end">@dimen/status_bar_padding_end</dimen>
+
+    <!-- Recognizing fingerprint animation -->
+    <dimen name="udfps_animation_offset">4dp</dimen>
 </resources>
